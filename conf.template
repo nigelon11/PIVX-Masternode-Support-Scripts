@@ -1,0 +1,14 @@
+rpcuser=<username>
+rpcpassword=<password>
+rpcallowip=127.0.0.1
+rpcallow=127.0.0.1
+bind=<vpsip>:51472
+rpcport=12345
+server=1
+daemon=1
+logtimestamps=1
+maxconnections=256
+masternode=1
+externalip=<vpsip>
+masternodeaddr=<vpsip>:51472
+masternodeprivkey=<privkey>
