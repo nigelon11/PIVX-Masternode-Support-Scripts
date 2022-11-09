@@ -16,12 +16,12 @@ ipv6addr+=$ipv6addrIn
 ipv6addr+="]"
 echo $ipv6addr
 
-cp conf.template pivx.conf
+cp conf.template ~/pivx.conf
 sed -i s/"<username>"/$uname/g ~/pivx.conf
 sed -i s/"<password>"/$upasswd/g ~/pivx.conf
 sed -i s/"<vpsip>"/$ipv4addr/g ~/pivx.conf
 
-cp conf.template pivx2.conf
+cp conf.template ~/pivx2.conf
 sed -i s/"<username>"/$uname/g ~/pivx2.conf
 sed -i s/"<password>"/$upasswd/g ~/pivx2.conf
 sed -i s/"<vpsip>"/$ipv6addr/g ~/pivx2.conf
@@ -29,7 +29,7 @@ sed -i s/12345/12346/g ~/pivx2.conf
 sed -i s/"rpcallowip=127.0.0.1"/"rpcallowip=::1"/g ~/pivx2.conf
 
 
-cp conf.template pivx3.conf
+cp conf.template ~/pivx3.conf
 sed -i s/"<username>"/$uname/g ~/pivx3.conf
 sed -i s/"<password>"/$upasswd/g ~/pivx3.conf
 sed -i s/"12345"/"12347"/g ~/pivx3.conf
@@ -39,7 +39,7 @@ echo $ipv6addr2
 sed -i s/"<vpsip>"/$ipv6addr2/g ~/pivx3.conf
 
 
-cp conf.template pivx4.conf
+cp conf.template ~/pivx4.conf
 sed -i s/"<username>"/$uname/g ~/pivx4.conf
 sed -i s/"<password>"/$upasswd/g ~/pivx4.conf
 sed -i s/"12345"/"12348"/g ~/pivx4.conf
@@ -49,7 +49,7 @@ echo $ipv6addr3
 sed -i s/"<vpsip>"/$ipv6addr3/g ~/pivx4.conf
 
 # just a test
-exit 0
+#exit 0
 # end just a test
 echo "download and install PIVX wallet"
 echo "sudo apt-get update && sudo apt-get -y upgrade"
@@ -70,6 +70,7 @@ echo "mkdir ~/.pivx3"
 mkdir ~/.pivx3
 echo "mkdir ~/.pivx4"
 mkdir ~/.pivx4
+
 
 # the rest is TBD experimental code for now
 # just a test
