@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # This script will monitor the masternodes and restart them if they are not running
-# This script should be run as a cron job every 5 minutes
+# This script should be run as a cron job every 10 minutes
 
 url='https://discord.com/api/webhooks/1085939028223856681/2lbE756pO8lDmKvpJ5we7W83YMIDgslcdCaaY0If2BU3to_y8TEFpulm_N7LjcOKxB0T'
 export pivx_version="5.5.0"
