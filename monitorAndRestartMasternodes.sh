@@ -35,7 +35,7 @@ then
 else
                         mynode=$(($mn_start_ix + 1))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@{discord_id}>  `date`: PIVX $mynode restarted $vps $myip"
+                        message="<@${discord_id}>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -48,7 +48,7 @@ then
 else
                         mynode=$(($mn_start_ix + 2))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@{discord_id}>  `date`: PIVX $mynode  restarted $vps $myip"
+                        message="<@${discord_id}>  `date`: PIVX $mynode  restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -61,7 +61,7 @@ then
 else
                         mynode=$(($mn_start_ix + 3))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@{discord_id}>  `date`: PIVX $mynode restarted $vps $myip"
+                        message="<@${discord_id}>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
