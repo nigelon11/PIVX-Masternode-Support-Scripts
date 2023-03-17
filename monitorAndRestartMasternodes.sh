@@ -10,6 +10,8 @@ export pivx_node1=".pivx"
 export pivx_node2=".pivx2"
 export pivx_node3=".pivx3"
 export pivx_node4=".pivx4"
+# to get your discord ID you need to enable developer mode in Discord, right click on the name and select copy ID
+export discord_id="886398318563958824"
 export vps=" $(hostname -s)  "
 
 export exec_command="/root/pivx-$pivx_version/bin/pivxd -datadir=/root/$pivx_node1"
@@ -20,7 +22,7 @@ then
 else
                         mynode=$(($mn_start_ix + 0))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
+                        message="<@$discord_id>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -33,7 +35,7 @@ then
 else
                         mynode=$(($mn_start_ix + 1))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
+                        message="<@discord_id>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -46,7 +48,7 @@ then
 else
                         mynode=$(($mn_start_ix + 2))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX $mynode  restarted $vps $myip"
+                        message="<@discord_id>  `date`: PIVX $mynode  restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -59,7 +61,7 @@ then
 else
                         mynode=$(($mn_start_ix + 3))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
+                        message="<@discord_id>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
