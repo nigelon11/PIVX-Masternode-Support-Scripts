@@ -18,8 +18,9 @@ if ps aux | grep -v grep | grep -w "$exec_command"  > /dev/null
 then
     echo Daemon running
 else
+                        mynode=$(($mn_start_ix + 0))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX restarted $vps $myip"
+                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -30,8 +31,9 @@ if ps aux | grep -v grep | grep -w "$exec_command"  > /dev/null
 then
     echo Daemon running
 else
+                        mynode=$(($mn_start_ix + 1))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX 1 restarted $vps $myip"
+                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -42,8 +44,9 @@ if ps aux | grep -v grep | grep -w "$exec_command"  > /dev/null
 then
     echo Daemon running
 else
+                        mynode=$(($mn_start_ix + 2))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX 2 restarted $vps $myip"
+                        message="<@370624208541319178>  `date`: PIVX $mynode  restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
@@ -54,8 +57,9 @@ if ps aux | grep -v grep | grep -w "$exec_command"  > /dev/null
 then
     echo Daemon running
 else
+                        mynode=$(($mn_start_ix + 3))
                         myip="$(curl -s http://whatismyip.akamai.com/)"
-                        message="<@370624208541319178>  `date`: PIVX 4 restarted $vps $myip"
+                        message="<@370624208541319178>  `date`: PIVX $mynode restarted $vps $myip"
                         msg_content=\"$message\"
                         curl -H "Content-Type: application/json" -X POST -d "{\"content\": $msg_content}" $url
                         eval "$exec_command &"
