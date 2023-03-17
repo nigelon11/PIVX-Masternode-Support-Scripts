@@ -1,8 +1,8 @@
 #!/bin/bash
 
-export vps=" $(hostname -s)  "
+export vps=" $(hostname -I)  "
 
-read -p "Please enter the first PIVX Masternode # for this VPS ($vps).  The script assumes contiguos numbering " mn_number
+read -p "Please enter the first PIVX Masternode # for this VPS ($vps).  The script assumes contiguos numbering. : " mn_number
 echo $mn_number
 
 # update script to reflect the masternode number
